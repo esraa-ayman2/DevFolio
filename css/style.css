@@ -1,0 +1,856 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    background-color: #000000e3;
+}
+
+nav ul li {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* font-size: 15px; */
+    font-weight: 600;
+    line-height: 24px;
+}
+
+nav .navbar-collapse .nav-link {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 11px !important;
+    margin-right: 11px !important;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-decoration: none;
+    transition: all 0.5s 0.3s;
+}
+
+nav .navbar-collapse .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.4s ease-in-out;
+}
+
+nav .navbar-collapse .nav-link:hover::after {
+    width: 100%;
+}
+
+.dropdown-submenu {
+    transition: all 0.3s;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.dropdown-menu li a {
+    white-space: nowrap;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 4px;
+}
+
+.nav-item.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    font-size: 29px;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.header h1 {
+    color: aliceblue;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    line-height: 86px;
+    font-size: 72px;
+}
+
+.word-flip {
+    font-family: Font Family system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.word-flip::before {
+    content: "Designer";
+    animation: changeWord 20s infinite;
+
+
+}
+
+@keyframes changeWord {
+
+    /* Designer */
+    0% {
+        content: "|";
+    }
+
+    1.5% {
+        content: "D|";
+    }
+
+    3% {
+        content: "De|";
+    }
+
+    4.5% {
+        content: "Des|";
+    }
+
+    6% {
+        content: "Desi|";
+    }
+
+    7.5% {
+        content: "Desig|";
+    }
+
+    9% {
+        content: "Design|";
+    }
+
+    10.5% {
+        content: "Designe|";
+    }
+
+    12% {
+        content: "Designer|";
+    }
+
+    13.5% {
+        content: "Designe|";
+    }
+
+    15% {
+        content: "Design|";
+    }
+
+    16.5% {
+        content: "Desig|";
+    }
+
+    18% {
+        content: "Desi|";
+    }
+
+    19.5% {
+        content: "Des|";
+    }
+
+    21% {
+        content: "De|";
+    }
+
+    22.5% {
+        content: "D|";
+    }
+
+    24% {
+        content: "|";
+    }
+
+    25.5% {
+        content: "|";
+    }
+
+    27% {
+        content: "|";
+    }
+
+    /* Developer (ناقصه علشان تكمليها انتِ) */
+    28.5% {
+        content: "De|";
+    }
+
+    30% {
+        content: "Dev|";
+    }
+
+    31.5% {
+        content: "Deve|";
+    }
+
+    33% {
+        content: "Devel|";
+    }
+
+    34.5% {
+        content: "Develo|";
+    }
+
+    36% {
+        content: "|";
+    }
+
+    37.5% {
+        content: "|";
+    }
+
+    39% {
+        content: "|";
+    }
+
+    /* Freelancer */
+    40.5% {
+        content: "F|";
+    }
+
+    42% {
+        content: "Fr|";
+    }
+
+    43.5% {
+        content: "Fre|";
+    }
+
+    45% {
+        content: "Free|";
+    }
+
+    46.5% {
+        content: "Freel|";
+    }
+
+    48% {
+        content: "Freela|";
+    }
+
+    49.5% {
+        content: "Freelan|";
+    }
+
+    51% {
+        content: "Freelanc|";
+    }
+
+    52.5% {
+        content: "Freelance|";
+    }
+
+    54% {
+        content: "Freelancer|";
+    }
+
+    55.5% {
+        content: "Freelance|";
+    }
+
+    57% {
+        content: "Freelanc|";
+    }
+
+    58.5% {
+        content: "Freelan|";
+    }
+
+    60% {
+        content: "Freela|";
+    }
+
+    61.5% {
+        content: "Freel|";
+    }
+
+    63% {
+        content: "Free|";
+    }
+
+    64.5% {
+        content: "Fre|";
+    }
+
+    66% {
+        content: "Fr|";
+    }
+
+    67.5% {
+        content: "F|";
+    }
+
+    69% {
+        content: "|";
+    }
+
+    70.5% {
+        content: "|";
+    }
+
+    72% {
+        content: "|";
+    }
+
+    /* Photographer */
+    73.5% {
+        content: "P|";
+    }
+
+    75% {
+        content: "Ph|";
+    }
+
+    76.5% {
+        content: "Pho|";
+    }
+
+    78% {
+        content: "Phot|";
+    }
+
+    79.5% {
+        content: "Photo|";
+    }
+
+    81% {
+        content: "Photog|";
+    }
+
+    82.5% {
+        content: "Photogr|";
+    }
+
+    84% {
+        content: "Photogra|";
+    }
+
+    85.5% {
+        content: "Photograp|";
+    }
+
+    87% {
+        content: "Photograph|";
+    }
+
+    88.5% {
+        content: "Photographe|";
+    }
+
+    90% {
+        content: "Photographer|";
+    }
+
+    91.5% {
+        content: "Photographe|";
+    }
+
+    93% {
+        content: "Photograph|";
+    }
+
+    94.5% {
+        content: "Photograp|";
+    }
+
+    96% {
+        content: "Photogra|";
+    }
+
+    97.5% {
+        content: "Photogr|";
+    }
+
+    99% {
+        content: "Photog|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/* About */
+#about {
+    scroll-margin-top: 60px;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+    overflow: hidden;
+}
+
+#about .container {
+    margin-top: 3% !important;
+
+}
+
+.title-s {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    color: rgb(8, 8, 8);
+}
+
+.title-info {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+.title-left {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    position: relative;
+}
+
+.title-left::before {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    width: 100px;
+    border-bottom: 3.4px #0078FF solid;
+}
+
+/* Services */
+#services {
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+    margin-top: 0 !important;
+    scroll-margin-top: 100px;
+
+}
+
+#services .container {
+    margin-top: 0% !important;
+
+}
+
+.services-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    font-size: 40px;
+    outline: 11px #0078FF solid;
+    margin-bottom: 18px;
+    transition: all 0.3s 0s;
+    margin-bottom: 30px;
+}
+
+#services .card-item:hover .services-icon {
+    color: #fff;
+    background-color: #0078ff;
+    outline: 0;
+    box-shadow: 0 0 0 11px #cde1f8;
+}
+
+.title-gen h3 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 48px;
+    white-space: nowrap;
+}
+
+.title-gen {
+    position: relative;
+}
+
+.title-gen::before {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    right: 0;
+
+    width: 40px;
+    border-bottom: 4px #0078FF solid;
+    transform: translateX(-50%);
+
+}
+
+#services .card-item h2 {
+    font-size: 22px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 27px;
+}
+
+#counter {
+    color: #ffffff;
+    min-height: 50vh;
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/counters-bg.jpg);
+    padding: 150px 0;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.count .icon {
+    font-size: 14px;
+    width: 75px;
+    height: 75px;
+    border: 6px solid #cde1f8;
+    border-radius: 50%;
+}
+
+.count .icon i {
+    padding-top: 20px;
+}
+
+.count .counter p {
+    font-size: 30px;
+}
+
+.count .counter span {
+    font-size: 16px;
+}
+
+/* portfoio */
+.portfolio {
+    scroll-margin-top: 60px;
+    background-color: #F5F5F5;
+    min-height: 100vh;
+}
+
+.portfolio .card-body {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.portfolio .card-img {
+    overflow: hidden;
+}
+
+.portfolio .col .card .card-img-top {
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.8s;
+}
+
+.portfolio .col .card:hover .card-img-top {
+    transform: scale(1.26);
+    overflow: hidden;
+}
+
+.portfolio .card-title {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 19px;
+}
+
+.w-ctegory {
+    color: #0078ff;
+}
+
+.w-ctegory,
+.w-date {
+    font-size: 15px;
+}
+
+.portfolio col {
+    position: relative;
+}
+
+.portfolio .card-body .icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #0078ff;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #0078FF;
+    border-radius: 50%;
+    bottom: 7%;
+    right: 5%;
+    font-size: 25px;
+}
+
+.portfolio .card-body .icon i {
+    text-align: center;
+    margin-top: 4.5px;
+    padding: 0;
+}
+
+/* carousel */
+.carousel-inner {
+    min-height: 70vh;
+    position: relative;
+    text-align: center;
+}
+
+.carousel p,
+.carousel h5 {
+    color: #000;
+}
+
+.carousel .carousel-item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 100px 3% !important;
+}
+
+.carousel .carousel-item img {
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-item .img {
+    width: 112px !important;
+    height: 190px;
+}
+
+.carousel .carousel-inner .c-caption h2 {
+    font-size: 22px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.carousel .carousel-inner .c-caption h2,
+.carousel .carousel-inner .c-caption p {
+    color: #fff;
+}
+
+.carousel {
+
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff69;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    border: none;
+    margin: 0 6px;
+    margin: 6px;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #000;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+/* Start Blog */
+.blog {
+    scroll-margin-top: 70px;
+    background-color: #F5F5F5;
+    margin-top: 0;
+}
+
+.blog .card-img-top {
+    overflow: hidden;
+}
+
+.blog .card-img-top img {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.blog .card-footer .card-img {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+}
+
+.blog .card-footer .card-img img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.blog .card-body .card-title a {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 21px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    transition: all 0.45s ease-in-out;
+}
+
+.blog .card-body .card-title a:hover {
+    color: #0078ff;
+}
+
+.blog .card-footer .footer-right span {
+    margin-left: 2px;
+}
+
+.blog .card-footer span,
+.blog .card-footer .post-date {
+    padding-top: 5px;
+}
+
+.blog .card-footer .post-date {
+    color: #747474;
+}
+
+.blog .card-category .category {
+    font-size: 11px;
+    color: #fff;
+}
+
+/* Start Contact */
+.contact {
+    scroll-margin-top: 70px;
+    min-height: 90vh;
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contact .title-gen {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding-bottom: 15px;
+    font-size: 34px;
+    margin-bottom: 40px;
+    /* white-space: nowrap; */
+}
+
+.contact .title-gen::before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 56px;
+    right: 0;
+
+    width: 110px;
+    border-bottom: 3px #0078FF solid;
+    transform: translateX(-50%);
+
+}
+
+.contact .list-icon {
+    padding: 0;
+    margin-top: 16px;
+}
+
+.contact .list-icon i {
+    color: #0078FF;
+    padding-top: 19PX;
+    padding-right: 10px;
+    font-size: 19px;
+}
+
+.contact .list-icon li {
+    line-height: 32px;
+    font-size: 18px;
+}
+
+.contact .list-icon li .contact-info {
+    color: #626060;
+    padding-top: 12px;
+}
+
+.contact .social-box ul li {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    height: 45px;
+    width: 45px;
+    border: #0078FF 2px solid;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    transition: all 0.4s;
+
+}
+
+.contact .social-box ul li:hover {
+    background-color: #0078FF;
+    color: #fff;
+}
+
+.contact .social-box li i {
+    position: absolute;
+    left: 49%;
+    top: 12px;
+    transform: translate(-50%);
+}
+
+.contact form .button {
+    font-size: 19px;
+    border: none;
+    background-color: #0078FF;
+    color: #fff;
+    padding: 11px 31px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.contact form .button:hover {
+    background-color: #2F91FF;
+    box-shadow: 0 0 0 4px #cde1f8
+}
+
+/* Footer */
+footer,
+footer a {
+    background-color: #0062D3;
+    color: #fff;
+}
