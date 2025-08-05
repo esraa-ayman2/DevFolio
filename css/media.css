@@ -87,6 +87,30 @@
         outline: 0;
         box-shadow: 0 0 0 7px #cde1f8;
     }
+    #counter {
+    padding: 90px 0;
+   
+}
+.count .icon {
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #cde1f8;
+    border-radius: 50%;
+}
+
+.count .icon i {
+    padding-top: 12px;
+}
+
+.count .counter p {
+    font-size: 22px;
+}
+
+.count .counter span {
+    font-size: 14px;
+}
+
 
 }
 
@@ -168,7 +192,29 @@
         box-shadow: 0 0 0 7px #cde1f8;
     }
 
+    #counter {
+    padding: 90px 0;
+   
+}
+.count .icon {
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #cde1f8;
+    border-radius: 50%;
+}
 
+.count .icon i {
+    padding-top: 12px;
+}
+
+.count .counter p {
+    font-size: 22px;
+}
+
+.count .counter span {
+    font-size: 14px;
+}
 
 }
 
@@ -231,7 +277,29 @@
         box-shadow: 0 0 0 7px #cde1f8;
     }
 
+    #counter {
+    padding: 90px 0;
+   
+}
+.count .icon {
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #cde1f8;
+    border-radius: 50%;
+}
 
+.count .icon i {
+    padding-top: 12px;
+}
+
+.count .counter p {
+    font-size: 22px;
+}
+
+.count .counter span {
+    font-size: 14px;
+}
 }
 
 /* lg 992px  -->       */
